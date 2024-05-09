@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "WD ",
+    "   "
+  ],
+  "key": {
+    "W": {
+      "item": "gcm:purple_stained_planks"
+    },
+    "D": {
+      "item": "minecraft:brown_dye"
+    }
+  },
+  "result": {
+    "item": "gcm:brown_stained_planks",
+    "count": 1
+  }
+}

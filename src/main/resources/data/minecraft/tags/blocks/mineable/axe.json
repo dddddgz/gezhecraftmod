@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "gcm:white_stained_planks",
+    "gcm:orange_stained_planks",
+    "gcm:magenta_stained_planks",
+    "gcm:light_blue_stained_planks",
+    "gcm:yellow_stained_planks",
+    "gcm:lime_stained_planks",
+    "gcm:pink_stained_planks",
+    "gcm:gray_stained_planks",
+    "gcm:light_gray_stained_planks",
+    "gcm:cyan_stained_planks",
+    "gcm:purple_stained_planks",
+    "gcm:blue_stained_planks",
+    "gcm:brown_stained_planks",
+    "gcm:green_stained_planks",
+    "gcm:red_stained_planks",
+    "gcm:black_stained_planks"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GGG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gray_wool"
+    }
+  },
+  "result": {
+    "item": "gcm:road_block",
+    "count": 9
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGY",
+    "GYG",
+    "YGG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gray_wool"
+    },
+    "Y": {
+      "item": "minecraft:yellow_wool"
+    }
+  },
+  "result": {
+    "item": "gcm:road_block_yellow_line_diagonally",
+    "count": 9
+  }
+}

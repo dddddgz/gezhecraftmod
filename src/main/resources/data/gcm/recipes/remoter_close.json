@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F  ",
+    "FDF",
+    "RRR"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "D": {
+      "item": "minecraft:red_dye"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "gcm:remoter_close",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "facing=false": { "model": "gcm:block/road_block_white_line_diagonally1" },
+    "facing=true": { "model": "gcm:block/road_block_white_line_diagonally2" }
+  }
+}

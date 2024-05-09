@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "gcm:obsidian_ore",
+    "gcm:remote_block"
+  ]
+}

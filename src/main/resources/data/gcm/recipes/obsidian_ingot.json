@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    " O ",
+    "   "
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "gcm:obsidian_ingot",
+    "count": 9
+  }
+}

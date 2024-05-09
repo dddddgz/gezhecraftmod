@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "I I",
+    "   "
+  ],
+  "key": {
+    "I": {
+      "item": "gcm:obsidian_ingot"
+    }
+  },
+  "result": {
+    "item": "gcm:obsidian_helmet"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "state=false": { "model": "gcm:block/remote_block" },
+    "state=true": { "model": "gcm:block/remote_block_2" }
+  }
+}

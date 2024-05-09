@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GWG",
+    "GWG",
+    "GWG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gray_wool"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "result": {
+    "item": "gcm:road_block_white_line",
+    "count": 9
+  }
+}

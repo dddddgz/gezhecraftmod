@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "gcm:block/road_block" }
+  }
+}
