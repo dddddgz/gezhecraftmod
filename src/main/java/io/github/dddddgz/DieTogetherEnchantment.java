@@ -5,10 +5,11 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 
-public class HighJumpEnchantment extends Enchantment {
-    public HighJumpEnchantment() {
-        super(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+public class DieTogetherEnchantment extends Enchantment {
+    public DieTogetherEnchantment() {
+        super(Rarity.COMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
     @Override
@@ -23,10 +24,11 @@ public class HighJumpEnchantment extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if(target instanceof LivingEntity) {
-            target.setVelocity(0, 5, 0);
+        PlayerEntity player = (PlayerEntity) user;
+        if (!(player.isCreative() || player.isSpectator())) {
+            user.kill();
         }
-
+        target.kill();
         super.onTargetDamaged(user, target, level);
     }
 }

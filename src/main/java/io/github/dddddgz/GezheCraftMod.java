@@ -9,6 +9,8 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.SpecialRecipeSerializer;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -23,8 +25,8 @@ public class GezheCraftMod implements ModInitializer {
 
 	public static final Item OBSIDIAN_INGOT = new Item(new FabricItemSettings());
 	public static final Item OBSIDIAN_PICKAXE = new ObsidianPickaxe();
-	public static final Item REMOTER_OPEN = new RemoterOpenItem(new FabricItemSettings());
-	public static final Item REMOTER_CLOSE = new RemoterCloseItem(new FabricItemSettings());
+	public static final Item REMOTER_OPEN = new RemoterOpenItem(new FabricItemSettings().maxCount(1));
+	public static final Item REMOTER_CLOSE = new RemoterCloseItem(new FabricItemSettings().maxCount(1));
 	public static final ArmorMaterial OBSIDIAN_ARMOR_MATERIAL = new ObsidianArmorMaterial();
 	public static final Item OBSIDIAN_MATERIAL_HELMET = new ArmorItem(OBSIDIAN_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Settings());
 	public static final Item OBSIDIAN_MATERIAL_CHESTPLATE = new ArmorItem(OBSIDIAN_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Settings());
@@ -32,25 +34,26 @@ public class GezheCraftMod implements ModInitializer {
 	public static final Item OBSIDIAN_MATERIAL_BOOTS = new ArmorItem(OBSIDIAN_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings());
 	public static final Item HMCL = new HMCLItem(new FabricItemSettings().food(new FoodComponent.Builder().hunger(6).snack().saturationModifier(6f).alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1200, 9), 1.0f).build()));
 	public static final Item PCL = new PCLItem(new FabricItemSettings().food(new FoodComponent.Builder().hunger(6).snack().saturationModifier(6f).alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 1200, 9), 1.0f).build()));
+	public static final Item GOLDEN_BUCKET = new GoldenBucketItem(new FabricItemSettings().maxCount(1));
 	public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE).strength(13.0F));
 	public static final Block REMOTE_BLOCK = new RemoteBlock(Block.Settings.of(Material.STONE).strength(4.0F).luminance(
 											 (state) -> (Boolean)state.get(BooleanProperty.of("state")) ? 15 : 0));
-	public static final Block WHITE_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block ORANGE_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block MAGENTA_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block LIGHT_BLUE_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block YELLOW_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block LIME_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block PINK_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block GRAY_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block LIGHT_GRAY_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block CYAN_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block PURPLE_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block BLUE_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block BROWN_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block GREEN_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block RED_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
-	public static final Block BLACK_STAINED_PLANKS = new Block(Block.Settings.copy(Blocks.OAK_PLANKS));
+	public static final Block WHITE_STAINED_PLANKS = new StainedPlanks();
+	public static final Block ORANGE_STAINED_PLANKS = new StainedPlanks();
+	public static final Block MAGENTA_STAINED_PLANKS = new StainedPlanks();
+	public static final Block LIGHT_BLUE_STAINED_PLANKS = new StainedPlanks();
+	public static final Block YELLOW_STAINED_PLANKS = new StainedPlanks();
+	public static final Block LIME_STAINED_PLANKS = new StainedPlanks();
+	public static final Block PINK_STAINED_PLANKS = new StainedPlanks();
+	public static final Block GRAY_STAINED_PLANKS = new StainedPlanks();
+	public static final Block LIGHT_GRAY_STAINED_PLANKS = new StainedPlanks();
+	public static final Block CYAN_STAINED_PLANKS = new StainedPlanks();
+	public static final Block PURPLE_STAINED_PLANKS = new StainedPlanks();
+	public static final Block BLUE_STAINED_PLANKS = new StainedPlanks();
+	public static final Block BROWN_STAINED_PLANKS = new StainedPlanks();
+	public static final Block GREEN_STAINED_PLANKS = new StainedPlanks();
+	public static final Block RED_STAINED_PLANKS = new StainedPlanks();
+	public static final Block BLACK_STAINED_PLANKS = new StainedPlanks();
 	public static final Block ROAD_BLOCK = new Block(Block.Settings.copy(Blocks.STONE));
 	public static final Block ROAD_BLOCK_WHITE_LINE = new RoadBlockWhiteLine(Block.Settings.copy(Blocks.STONE));
 	public static final Block ROAD_BLOCK_WHITE_LINE_DIAGONALLY = new RoadBlockWhiteLineDiagonally(Block.Settings.copy(Blocks.STONE));
@@ -59,6 +62,9 @@ public class GezheCraftMod implements ModInitializer {
 	public static final Block ROAD_BLOCK_YELLOW_DOUBLE_LINE = new RoadBlockYellowDoubleLine(Block.Settings.copy(Blocks.STONE));
 	public static final Block ROAD_BLOCK_YELLOW_DOUBLE_LINE_DIAGONALLY = new RoadBlockYellowDoubleLineDiagonally(Block.Settings.copy(Blocks.STONE));
 	public static final Enchantment HIGH_JUMP = new HighJumpEnchantment();
+	public static final Enchantment DIE_TOGETHER = new DieTogetherEnchantment();
+	public static final Enchantment TAKE_CHANCE = new TakeChanceEnchantment();
+	public static final Enchantment FATAL = new FatalEnchantment();
 
 	public static final ItemGroup GCM_GROUP = FabricItemGroupBuilder.create(
 					new Identifier("gcm", "group"))
@@ -117,6 +123,7 @@ public class GezheCraftMod implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("gcm", "obsidian_boots"), OBSIDIAN_MATERIAL_BOOTS);
 		Registry.register(Registry.ITEM, new Identifier("gcm", "hmcl"), HMCL);
 		Registry.register(Registry.ITEM, new Identifier("gcm", "pcl"), PCL);
+		Registry.register(Registry.ITEM, new Identifier("gcm", "golden_bucket"), GOLDEN_BUCKET);
 		Registry.register(Registry.ITEM, new Identifier("gcm", "obsidian_ore"), new BlockItem(OBSIDIAN_ORE, new FabricItemSettings()));
 		Registry.register(Registry.ITEM, new Identifier("gcm", "remote_block"), new BlockItem(REMOTE_BLOCK, new FabricItemSettings()));
 		Registry.register(Registry.ITEM, new Identifier("gcm", "white_stained_planks"), new BlockItem(WHITE_STAINED_PLANKS, new FabricItemSettings()));
@@ -168,5 +175,8 @@ public class GezheCraftMod implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("gcm", "road_block_yellow_double_line"), ROAD_BLOCK_YELLOW_DOUBLE_LINE);
 		Registry.register(Registry.BLOCK, new Identifier("gcm", "road_block_yellow_double_line_diagonally"), ROAD_BLOCK_YELLOW_DOUBLE_LINE_DIAGONALLY);
 		Registry.register(Registry.ENCHANTMENT, new Identifier("gcm", "high_jump"), HIGH_JUMP);
+		Registry.register(Registry.ENCHANTMENT, new Identifier("gcm", "die_together"), DIE_TOGETHER);
+		Registry.register(Registry.ENCHANTMENT, new Identifier("gcm", "take_chance"), TAKE_CHANCE);
+		Registry.register(Registry.ENCHANTMENT, new Identifier("gcm", "fatal"), FATAL);
 	}
 }

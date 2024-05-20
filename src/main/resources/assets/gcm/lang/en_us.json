@@ -12,6 +12,7 @@
   "item.gcm.hmcl.tooltip": "Hello Minecraft Launcher",
   "item.gcm.pcl": "PCL",
   "item.gcm.pcl.tooltip": "Plain Craft Launcher",
+  "item.gcm.golden_bucket": "Golden Bucket",
   "block.gcm.remote_block": "Remote Block",
   "block.gcm.obsidian_ore": "Obsidian Ore",
   "block.gcm.white_stained_planks": "White Stained Planks",
@@ -37,5 +38,8 @@
   "block.gcm.road_block_yellow_line_diagonally": "Road Block (Yellow Line, Diagonally)",
   "block.gcm.road_block_yellow_double_line": "Road Block (Yellow Double Line)",
   "block.gcm.road_block_yellow_double_line_diagonally": "Road Block (Yellow Double Line, Diagonally)",
-  "enchantment.gcm.high_jump": "High Jump"
+  "enchantment.gcm.high_jump": "High Jump",
+  "enchantment.gcm.die_together": "Die Together",
+  "enchantment.gcm.take_chance": "Take Chance",
+  "enchantment.gcm.fatal": "Fatal"
 }

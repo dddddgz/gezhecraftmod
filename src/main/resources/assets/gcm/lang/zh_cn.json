@@ -12,6 +12,7 @@
   "item.gcm.hmcl.tooltip": "Hello Minecraft Launcher",
   "item.gcm.pcl": "PCL",
   "item.gcm.pcl.tooltip": "Plain Craft Launcher",
+  "item.gcm.golden_bucket": "金桶",
   "block.gcm.remote_block": "遥控方块",
   "block.gcm.obsidian_ore": "黑曜石矿石",
   "block.gcm.white_stained_planks": "白色染色木板",
@@ -37,5 +38,8 @@
   "block.gcm.road_block_yellow_line_diagonally": "道路方块（黄线，对角）",
   "block.gcm.road_block_yellow_double_line": "道路方块（双黄线）",
   "block.gcm.road_block_yellow_double_line_diagonally": "道路方块（双黄线，对角）",
-  "enchantment.gcm.high_jump": "跳高"
+  "enchantment.gcm.high_jump": "跳高",
+  "enchantment.gcm.die_together": "同归于尽",
+  "enchantment.gcm.take_chance": "碰运气",
+  "enchantment.gcm.fatal": "致命"
 }
