@@ -1,0 +1,31 @@
+{
+  "parent": "gcm:root",
+  "display": {
+    "icon": {
+      "item": "gcm:obsidian_ingot"
+    },
+    "title": "主世界合金",
+    "description": "将黑曜石分解为9个黑曜石锭",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:obsidian_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get"]
+  ]
+}

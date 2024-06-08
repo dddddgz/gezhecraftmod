@@ -1,0 +1,27 @@
+{
+  "parent": "gcm:root",
+  "display": {
+    "icon": {
+      "item": "gcm:spicy"
+    },
+    "title": "中了90%概率",
+    "description": "吃掉一个辣椒，并获得辣效果",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "gcm:spicy": {}
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["get"]
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "gcm:icon"
+    },
+    "title": "歌者之路",
+    "description": "放置任意方块",
+    "background": "gcm:textures/gui/advancements/backgrounds/light_gray_wool.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "place": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    ["place"]
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "parent": "gcm:obsidian_ingot",
+  "display": {
+    "icon": {
+      "item": "gcm:obsidian_pickaxe"
+    },
+    "title": "终极升级",
+    "description": "合成黑曜石镐",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:obsidian_pickaxe"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get"]
+  ]
+}

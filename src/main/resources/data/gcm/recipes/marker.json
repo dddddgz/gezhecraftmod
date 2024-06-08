@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:compass"
+    }
+  },
+  "result": {
+    "item": "gcm:marker",
+    "count": 2
+  }
+}

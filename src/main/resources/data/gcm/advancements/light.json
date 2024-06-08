@@ -1,0 +1,46 @@
+{
+  "parent": "gcm:redstone",
+  "display": {
+    "icon": {
+      "item": "gcm:white_light"
+    },
+    "title": "彩色的光",
+    "description": "获得有颜色的红石灯",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:white_light",
+              "gcm:orange_light",
+              "gcm:magenta_light",
+              "gcm:light_blue_light",
+              "gcm:yellow_light",
+              "gcm:lime_light",
+              "gcm:pink_light",
+              "gcm:gray_light",
+              "gcm:light_gray_light",
+              "gcm:cyan_light",
+              "gcm:purple_light",
+              "gcm:blue_light",
+              "gcm:brown_light",
+              "gcm:green_light",
+              "gcm:red_light",
+              "gcm:black_light"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get"]
+  ]
+}

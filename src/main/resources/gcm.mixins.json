@@ -1,8 +1,9 @@
 {
-	"required": false,
+	"required": true,
 	"package": "io.github.dddddgz.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"BrewingMixin",
 		"ExampleMixin"
 	],
 	"injectors": {

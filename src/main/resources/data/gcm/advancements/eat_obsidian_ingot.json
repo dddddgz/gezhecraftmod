@@ -1,0 +1,29 @@
+{
+  "parent": "gcm:obsidian_ingot",
+  "display": {
+    "icon": {
+      "item": "gcm:obsidian_ingot"
+    },
+    "title": "这也能吃？",
+    "description": "吃掉一个黑曜石锭",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "eat": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "gcm:obsidian_ingot"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["eat"]
+  ]
+}

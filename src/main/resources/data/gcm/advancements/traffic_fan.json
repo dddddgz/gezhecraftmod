@@ -1,0 +1,57 @@
+{
+  "parent": "gcm:light",
+  "display": {
+    "icon": {
+      "item": "gcm:green_light"
+    },
+    "title": "交通迷",
+    "description": "获得红灯、黄灯、绿灯",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:red_light"
+            ]
+          }
+        ]
+      }
+    },
+    "get2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:yellow_light"
+            ]
+          }
+        ]
+      }
+    },
+    "get3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:green_light"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get1"],
+    ["get2"],
+    ["get3"]
+  ]
+}

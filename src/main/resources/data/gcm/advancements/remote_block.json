@@ -1,0 +1,31 @@
+{
+  "parent": "gcm:redstone",
+  "display": {
+    "icon": {
+      "item": "gcm:remote_block"
+    },
+    "title": "这是什么？",
+    "description": "合成遥控方块",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:remote_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get"]
+  ]
+}

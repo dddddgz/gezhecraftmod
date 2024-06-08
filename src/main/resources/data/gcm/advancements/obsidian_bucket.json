@@ -1,0 +1,31 @@
+{
+  "parent": "gcm:root",
+  "display": {
+    "icon": {
+      "item": "gcm:obsidian_bucket"
+    },
+    "title": "一桶黑曜石？",
+    "description": "合成一个黑曜石桶",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:obsidian_bucket"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get"]
+  ]
+}

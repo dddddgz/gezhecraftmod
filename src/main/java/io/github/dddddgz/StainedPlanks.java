@@ -1,21 +1,19 @@
 package io.github.dddddgz;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class StainedPlanks extends Block {
-    public static final Block[] YUANBAN_PLANKS = new Block[]{
-            Blocks.OAK_PLANKS,
-            Blocks.SPRUCE_PLANKS,
-            Blocks.BIRCH_PLANKS,
-            Blocks.JUNGLE_PLANKS,
-            Blocks.ACACIA_PLANKS,
-            Blocks.DARK_OAK_PLANKS,
-            Blocks.WARPED_PLANKS,
-            Blocks.CRIMSON_PLANKS
-    };
     public static final Item[] DYES = new Item[] {
             Items.WHITE_DYE,
             Items.ORANGE_DYE,
@@ -56,4 +54,23 @@ public class StainedPlanks extends Block {
     public StainedPlanks() {
         super(Block.Settings.copy(Blocks.OAK_PLANKS));
     }
+
+//    @Override
+//    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+//        ItemStack itemStack = player.getStackInHand(hand);
+//        Item item = itemStack.getItem();
+//        int index = -1;
+//        for (int i = 0; i < DYES.length; i++) {
+//            if (item == DYES[i]) {
+//                index = i;
+//                break;
+//            }
+//        }
+//        if (index != -1) {
+//            world.setBlockState(pos, STAINED_PLANKS[index].getDefaultState());
+//            return ActionResult.SUCCESS;
+//        } else {
+//            return ActionResult.PASS;
+//        }
+//    }
 }

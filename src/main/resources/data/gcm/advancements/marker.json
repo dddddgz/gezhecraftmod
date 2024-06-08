@@ -1,0 +1,31 @@
+{
+  "parent": "gcm:root",
+  "display": {
+    "icon": {
+      "item": "gcm:marker"
+    },
+    "title": "这才是像样的指南针",
+    "description": "获得标记器",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:marker"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get"]
+  ]
+}

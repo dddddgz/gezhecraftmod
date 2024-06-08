@@ -1,0 +1,27 @@
+{
+  "parent": "gcm:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:paper"
+    },
+    "title": "缺乏真实经历令人痛苦",
+    "description": "获得写作文效果",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "gcm:composition_writing": {}
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["get"]
+  ]
+}

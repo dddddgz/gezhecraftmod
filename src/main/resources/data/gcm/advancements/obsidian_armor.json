@@ -1,0 +1,67 @@
+{
+  "parent": "gcm:obsidian_ingot",
+  "display": {
+    "icon": {
+      "item": "gcm:obsidian_chestplate"
+    },
+    "title": "黑曜石护体",
+    "description": "合成任意一件黑曜石护甲",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:obsidian_helmet"
+            ]
+          }
+        ]
+      }
+    },
+    "get2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:obsidian_chestplate"
+            ]
+          }
+        ]
+      }
+    },
+    "get3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:obsidian_leggings"
+            ]
+          }
+        ]
+      }
+    },
+    "get4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gcm:obsidian_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get1", "get2", "get3", "get4"]
+  ]
+}
